@@ -4,7 +4,7 @@
 
 Summary: GNOME Structured File library
 Name: libgsf
-Version: 1.14.4
+Version: 1.14.5
 Release: %mkrel 1
 Epoch: 1
 Group: System/Libraries
@@ -54,6 +54,10 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 %prep
 
 %setup -q
+#gw configure is broken
+aclocal -I m4
+autoconf
+automake
 
 %build
 
@@ -76,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgsf
 
 %post
 %post_install_gconf_schemas gsf-office-thumbnailer
-
+ 
 %preun
 %preun_uninstall_gconf_schemas gsf-office-thumbnailer
 
