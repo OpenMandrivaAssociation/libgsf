@@ -1,6 +1,7 @@
 %define api_version 1
 %define lib_major   114
 %define lib_name    %mklibname gsf- %{api_version} %{lib_major}
+%define develname    %mklibname -d gsf- %{api_version}
 
 Summary: GNOME Structured File library
 Name: libgsf
@@ -29,7 +30,7 @@ Group: %{group}
 %description -n %{lib_name}
 A library for reading and writing structured files (eg MS OLE and Zip).
 
-%package -n %{lib_name}-devel
+%package -n %develname
 Summary: Support files necessary to compile applications with libgsf
 Group: Development/C
 Requires: %{lib_name} = %epoch:%{version}
@@ -37,8 +38,9 @@ Provides: %{name}-%{api_version}-devel = %epoch:%{version}-%{release}
 Provides: %{name}-devel = %epoch:%{version}-%{release}
 Requires: libxml2-devel
 Requires: libglib2-devel
+Obsoletes: %mklibname -d gsf- 1 114
 
-%description -n %{lib_name}-devel
+%description -n %develname
 Libraries, headers, and support files necessary to compile
 applications using libgsf.
 
@@ -98,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgsf
 %doc AUTHORS COPYING README
 %{_libdir}/libgsf*-%{api_version}.so.%{lib_major}*
 
-%files -n %{lib_name}-devel
+%files -n %develname
 %defattr(-,root,root)
 %doc %{_datadir}/gtk-doc/html/gsf
 %{_libdir}/*.so
