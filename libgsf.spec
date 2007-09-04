@@ -4,7 +4,7 @@
 
 Summary: GNOME Structured File library
 Name: libgsf
-Version: 1.14.5
+Version: 1.14.6
 Release: %mkrel 1
 Epoch: 1
 Group: System/Libraries
