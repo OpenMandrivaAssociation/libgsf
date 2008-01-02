@@ -11,6 +11,7 @@ Epoch: 1
 Group: System/Libraries
 License: GPL
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://www.gnumeric.org
 BuildRequires: libbonobo2_x-devel
 BuildRequires: gnome-vfs2-devel
