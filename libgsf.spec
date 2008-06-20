@@ -80,8 +80,10 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgsf
 %postun -p /sbin/ldconfig -n %{lib_name}
 %endif
 
+%if %mdkversion < 200900
 %post
 %post_install_gconf_schemas gsf-office-thumbnailer
+%endif
  
 %preun
 %preun_uninstall_gconf_schemas gsf-office-thumbnailer
