@@ -5,11 +5,11 @@
 
 Summary: GNOME Structured File library
 Name: libgsf
-Version: 1.14.8
-Release: %mkrel 3
+Version: 1.14.9
+Release: %mkrel 1
 Epoch: 1
 Group: System/Libraries
-License: GPL
+License: LGPLv2
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://www.gnumeric.org
@@ -17,7 +17,7 @@ BuildRequires: libbonobo2_x-devel
 BuildRequires: gnome-vfs2-devel
 BuildRequires: pygtk2.0-devel
 BuildRequires: gtk-doc
-BuildRequires: perl-XML-Parser
+BuildRequires: intltool
 
 
 %description
