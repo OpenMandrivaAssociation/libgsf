@@ -6,7 +6,7 @@
 Summary: GNOME Structured File library
 Name: libgsf
 Version: 1.14.10
-Release: %mkrel 1
+Release: %mkrel 2
 Epoch: 1
 Group: System/Libraries
 License: LGPLv2
@@ -18,7 +18,6 @@ BuildRequires: gnome-vfs2-devel
 BuildRequires: pygtk2.0-devel
 BuildRequires: gtk-doc
 BuildRequires: intltool
-
 
 %description
 A library for reading and writing structured files (eg MS OLE and Zip).
