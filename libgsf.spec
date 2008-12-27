@@ -65,7 +65,7 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 %install
 rm -rf $RPM_BUILD_ROOT libgsf.lang
 
-%makeinstall
+%makeinstall_std
 
 # remove unpackaged files
 rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/libgsf
