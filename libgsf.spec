@@ -5,12 +5,13 @@
 
 Summary: GNOME Structured File library
 Name: libgsf
-Version: 1.14.10
-Release: %mkrel 2
+Version: 1.14.11
+Release: %mkrel 1
 Epoch: 1
 Group: System/Libraries
 License: LGPLv2
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch: libgsf-1.14.11-format-string.patch
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://www.gnumeric.org
 BuildRequires: libbonobo2_x-devel
@@ -55,6 +56,7 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 %prep
 
 %setup -q
+%patch -p1
 
 %build
 
