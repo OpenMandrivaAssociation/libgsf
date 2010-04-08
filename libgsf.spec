@@ -16,6 +16,7 @@ Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: http://www.gnumeric.org
 BuildRequires: libbonobo2_x-devel
 BuildRequires: gnome-vfs2-devel
+BuildRequires: popt-devel
 BuildRequires: pygtk2.0-devel
 BuildRequires: gtk-doc
 BuildRequires: intltool
