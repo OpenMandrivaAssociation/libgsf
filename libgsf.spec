@@ -15,6 +15,7 @@ Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz
 
 BuildRequires: gtk-doc
 BuildRequires: intltool
+BuildRequires: GConf2
 BuildRequires: pkgconfig(gdk-pixbuf-2.0)
 BuildRequires: pkgconfig(glib-2.0) >= 2.8.0
 BuildRequires: pkgconfig(gnome-vfs-2.0) >= 2.2.0
@@ -22,6 +23,7 @@ BuildRequires: pkgconfig(gnome-vfs-module-2.0) >= 2.2.0
 BuildRequires: pkgconfig(gobject-2.0) >= 2.6.0
 BuildRequires: pkgconfig(libbonobo-2.0) >= 2.0.0
 BuildRequires: pkgconfig(libxml-2.0) >= 2.4.16
+BuildRequires: pkgconfig(popt)
 BuildRequires: pkgconfig(pygobject-2.0) >= 2.10.0
 BuildRequires: pkgconfig(pygtk-2.0)
 
