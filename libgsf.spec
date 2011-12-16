@@ -83,7 +83,6 @@ rm -f %{buildroot}%{_libdir}/*.la
 
 %files -f libgsf.lang
 %doc AUTHORS COPYING README
-%{_sysconfdir}/gconf/schemas/gsf-office-thumbnailer.schemas
 %{_bindir}/gsf
 %{_bindir}/gsf-vba-dump
 %{_bindir}/gsf-office-thumbnailer
