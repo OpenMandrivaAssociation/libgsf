@@ -86,6 +86,7 @@ rm -f %{buildroot}%{_libdir}/*.la
 %{_bindir}/gsf
 %{_bindir}/gsf-vba-dump
 %{_bindir}/gsf-office-thumbnailer
+%_datadir/thumbnailers/gsf-office.thumbnailer
 %{_mandir}/man1/*
 
 %files -n %{lib_name}
