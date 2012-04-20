@@ -26,6 +26,7 @@ BuildRequires: pkgconfig(libxml-2.0) >= 2.4.16
 BuildRequires: pkgconfig(popt)
 BuildRequires: pkgconfig(pygobject-2.0) >= 2.10.0
 BuildRequires: pkgconfig(pygtk-2.0)
+BuildRequires: bzip2-devel
 
 %description
 A library for reading and writing structured files (eg MS OLE and Zip).
@@ -64,6 +65,7 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 
 %configure2_5x \
 	--disable-static \
+	--enable-python \
 	--enable-gtk-doc
 
 %make
