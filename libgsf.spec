@@ -80,7 +80,7 @@ rm -rf %{buildroot}%{_datadir}/doc/libgsf
 rm -f %{buildroot}%{_libdir}/*.la
 %find_lang libgsf
 #gw put everything in _one_ directory:
-%if %py_platsitedir != %py_puresitedir
+%if %_lib != lib
 mv %buildroot%{py_puresitedir}/gsf/* %buildroot%{py_platsitedir}/gsf/
 %endif
 
