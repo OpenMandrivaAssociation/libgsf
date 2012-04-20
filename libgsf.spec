@@ -6,7 +6,7 @@
 Summary: GNOME Structured File library
 Name: libgsf
 Version: 1.14.23
-Release: 1
+Release: 2
 Epoch: 1
 Group: System/Libraries
 License: LGPLv2
