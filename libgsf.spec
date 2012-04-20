@@ -79,6 +79,11 @@ rm -rf %{buildroot} libgsf.lang
 rm -rf %{buildroot}%{_datadir}/doc/libgsf
 rm -f %{buildroot}%{_libdir}/*.la
 %find_lang libgsf
+#gw put everything in _one_ directory:
+%if %py_platsitedir != %py_puresitedir
+mv %buildroot%{py_puresitedir}/gsf/* %buildroot%{py_platsitedir}/gsf/
+%endif
+
 
 %preun
 %preun_uninstall_gconf_schemas gsf-office-thumbnailer
@@ -102,5 +107,4 @@ rm -f %{buildroot}%{_libdir}/*.la
 
 %files -n python-libgsf
 %{py_platsitedir}/gsf/
-%{py_puresitedir}/gsf/
 
