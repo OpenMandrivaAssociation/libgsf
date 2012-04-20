@@ -65,7 +65,7 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 
 %configure2_5x \
 	--disable-static \
-	--enable-python \
+	--with-python \
 	--enable-gtk-doc
 
 %make
