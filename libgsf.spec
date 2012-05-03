@@ -1,13 +1,13 @@
-%define api_version 1
-%define lib_major   114
-%define lib_name	%mklibname gsf- %{api_version} %{lib_major}
-%define develname	%mklibname -d gsf- %{api_version}
+%define api 1
+%define major   114
+%define libname	%mklibname gsf- %{api} %{major}
+%define develname	%mklibname -d gsf- %{api}
 
 Summary: GNOME Structured File library
 Name: libgsf
+Epoch: 1
 Version: 1.14.23
 Release: 2
-Epoch: 1
 Group: System/Libraries
 License: LGPLv2
 URL: http://www.gnumeric.org
@@ -31,18 +31,18 @@ BuildRequires: bzip2-devel
 %description
 A library for reading and writing structured files (eg MS OLE and Zip).
 
-%package -n %{lib_name}
+%package -n %{libname}
 Summary:  %{summary}
 Group: %{group}
 
-%description -n %{lib_name}
+%description -n %{libname}
 A library for reading and writing structured files (eg MS OLE and Zip).
 
 %package -n %{develname}
 Summary: Support files necessary to compile applications with libgsf
 Group: Development/C
-Requires: %{lib_name} = %{epoch}:%{version}-%{release}
-Provides: %{name}-%{api_version}-devel = %{epoch}:%{version}-%{release}
+Requires: %{libname} = %{epoch}:%{version}-%{release}
+Provides: %{name}-%{api}-devel = %{epoch}:%{version}-%{release}
 Provides: %{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes: %mklibname -d gsf- 1 114
 
@@ -62,7 +62,6 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 %setup -q
 
 %build
-
 %configure2_5x \
 	--disable-static \
 	--with-python \
@@ -71,8 +70,6 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 %make
 
 %install
-rm -rf %{buildroot} libgsf.lang
-
 %makeinstall_std
 
 # remove unpackaged files
@@ -80,24 +77,23 @@ rm -rf %{buildroot}%{_datadir}/doc/libgsf
 rm -f %{buildroot}%{_libdir}/*.la
 %find_lang libgsf
 #gw put everything in _one_ directory:
-%if %_lib != lib
-mv %buildroot%{py_puresitedir}/gsf/* %buildroot%{py_platsitedir}/gsf/
+%if %{_lib} != lib
+mv %{buildroot}%{py_puresitedir}/gsf/* %{buildroot}%{py_platsitedir}/gsf/
 %endif
-
 
 %preun
 %preun_uninstall_gconf_schemas gsf-office-thumbnailer
 
-%files -f libgsf.lang
+%files -f %{name}.lang
 %doc AUTHORS COPYING README
 %{_bindir}/gsf
 %{_bindir}/gsf-vba-dump
 %{_bindir}/gsf-office-thumbnailer
-%_datadir/thumbnailers/gsf-office.thumbnailer
+%{_datadir}/thumbnailers/gsf-office.thumbnailer
 %{_mandir}/man1/*
 
-%files -n %{lib_name}
-%{_libdir}/libgsf*-%{api_version}.so.%{lib_major}*
+%files -n %{libname}
+%{_libdir}/libgsf*-%{api}.so.%{major}*
 
 %files -n %{develname}
 %doc %{_datadir}/gtk-doc/html/gsf
