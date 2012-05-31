@@ -27,8 +27,10 @@ BuildRequires: pkgconfig(gobject-2.0) >= 2.6.0
 BuildRequires: pkgconfig(libbonobo-2.0) >= 2.0.0
 BuildRequires: pkgconfig(libxml-2.0) >= 2.4.16
 BuildRequires: pkgconfig(popt)
+BuildRequires: pkgconfig(pygobject-2.0)
 BuildRequires: pkgconfig(gtk+-3.0) >= 3.0.0 
 BuildRequires: pkgconfig(gobject-introspection-1.0) >= 0.6.4
+BuildRequires: pygtk2.0-devel
 BuildRequires: bzip2-devel
 
 %description
