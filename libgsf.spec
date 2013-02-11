@@ -14,6 +14,7 @@ Group:		System/Libraries
 License:	LGPLv2
 URL:		http://www.gnumeric.org
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/1.14/%{name}-%{version}.tar.xz
+Patch0:		libgsf-1.14.25-link-python-extension.patch
 
 BuildRequires:	GConf2
 BuildRequires:	gtk-doc
@@ -72,6 +73,8 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 
 %prep
 %setup -q
+%patch0 -p1 -b .pylink~
+autoreconf -fi
 
 %build
 %configure2_5x \
