@@ -7,14 +7,15 @@
 %define devname	%mklibname -d gsf- %{api}
 
 Summary:	GNOME Structured File library
+
 Name:		libgsf
 Epoch:		1
-Version:	1.14.25
-Release:	9
+Version:	1.14.30
+Release:	1
 Group:		System/Libraries
 License:	LGPLv2
 Url:		http://www.gnumeric.org
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/libgsf/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/libgsf/1.14/%{name}-%{version}.tar.xz
 Patch0:		libgsf-1.14.25-link-python-extension.patch
 
 BuildRequires:	GConf2
@@ -39,6 +40,7 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 
 %package -n %{libname}
 Summary:	%{summary}
+
 Group:		%{group}
 
 %description -n %{libname}
@@ -46,6 +48,7 @@ A library for reading and writing structured files (eg MS OLE and Zip).
 
 %package -n %{girname}
 Summary:	GObject Introspection interface description for %{name}
+
 Group:		System/Libraries
 
 %description -n %{girname}
@@ -53,6 +56,7 @@ GObject Introspection interface description for %{name}.
 
 %package -n %{devname}
 Summary:	Support files necessary to compile applications with libgsf
+
 Group:		Development/C
 Requires:	%{libname} = %{epoch}:%{version}-%{release}
 Requires:	%{girname} = %{epoch}:%{version}-%{release}
@@ -66,6 +70,7 @@ applications using libgsf.
 
 %package -n python-libgsf
 Summary:	Python bindings for libgsf
+
 Group:		Development/Python
 Requires:	pygtk2.0
 
@@ -122,4 +127,5 @@ mv %{buildroot}%{py_puresitedir}/gsf/* %{buildroot}%{py_platsitedir}/gsf/
 
 %files -n python-libgsf
 %{py_platsitedir}/gsf/
+
 
