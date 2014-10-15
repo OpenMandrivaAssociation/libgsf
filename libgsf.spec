@@ -23,15 +23,11 @@ BuildRequires:	bzip2-devel
 BuildRequires:	pygtk2.0-devel
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(glib-2.0) >= 2.8.0
-BuildRequires:	pkgconfig(gnome-vfs-2.0) >= 2.2.0
-BuildRequires:	pkgconfig(gnome-vfs-module-2.0) >= 2.2.0
 BuildRequires:	pkgconfig(gobject-2.0) >= 2.6.0
 BuildRequires:	pkgconfig(gobject-introspection-1.0) >= 0.6.4
 BuildRequires:	pkgconfig(gtk+-3.0) >= 3.0.0 
-BuildRequires:	pkgconfig(libbonobo-2.0) >= 2.0.0
 BuildRequires:	pkgconfig(libxml-2.0) >= 2.4.16
 BuildRequires:	pkgconfig(popt)
-BuildRequires:	pkgconfig(pygobject-2.0)
 
 %description
 A library for reading and writing structured files (eg MS OLE and Zip).
