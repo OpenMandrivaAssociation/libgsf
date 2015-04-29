@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   libgsf-1.14.30.tar.xz: 5eb15d574c6b9e9c5e63bbcdff8f866b3544485a
+sources:
+  libgsf-1.14.33.tar.xz: e1a35fa020100843b5cc7dc1c2023d03a763acf2
