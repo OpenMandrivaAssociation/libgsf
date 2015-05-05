@@ -16,11 +16,9 @@ License:	LGPLv2
 URL:		http://www.gnumeric.org
 Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/libgsf/1.14/%{name}-%{version}.tar.xz
 
-BuildRequires:	GConf2
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	bzip2-devel
-BuildRequires:	pygtk2.0-devel
 BuildRequires:	pkgconfig(gdk-pixbuf-2.0)
 BuildRequires:	pkgconfig(glib-2.0) >= 2.8.0
 BuildRequires:	pkgconfig(gobject-2.0) >= 2.6.0
