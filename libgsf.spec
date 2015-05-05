@@ -64,9 +64,7 @@ applications using libgsf.
 %setup -q
 
 %build
-%configure2_5x \
-	--disable-static \
-	--with-python \
+%configure \
 	--enable-gtk-doc \
 	--enable-introspection
 
