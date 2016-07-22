@@ -9,12 +9,12 @@ Summary:	GNOME Structured File library
 
 Name:		libgsf
 Epoch:		1
-Version:	 1.14.34
-Release:	5
+Version:	1.14.39
+Release:	1
 Group:		System/Libraries
 License:	LGPLv2
 URL:		http://www.gnumeric.org
-Source0:	ftp://ftp.gnome.org:21/pub/GNOME/sources/libgsf/1.14/%{name}-%{version}.tar.xz
+Source0:	http://download.gnome.org/sources/libgsf/1.14/%{name}-%{version}.tar.xz
 
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
