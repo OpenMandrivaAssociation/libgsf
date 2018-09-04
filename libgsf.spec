@@ -8,8 +8,7 @@
 Summary:	GNOME Structured File library
 
 Name:		libgsf
-Epoch:		1
-Version:	1.14.39
+Version:	1.14.44
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2
