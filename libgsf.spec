@@ -8,8 +8,7 @@
 Summary:	GNOME Structured File library
 
 Name:		libgsf
-Epoch:		1
-Version:	1.14.39
+Version:	1.14.44
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2
@@ -50,10 +49,10 @@ GObject Introspection interface description for %{name}.
 Summary:	Support files necessary to compile applications with libgsf
 
 Group:		Development/C
-Requires:	%{libname} = %{epoch}:%{version}-%{release}
-Requires:	%{girname} = %{epoch}:%{version}-%{release}
-Provides:	%{name}-%{api}-devel = %{epoch}:%{version}-%{release}
-Provides:	%{name}-devel = %{epoch}:%{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
+Provides:	%{name}-%{api}-devel = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%mklibname -d gsf- 1 114
 
 %description -n %{devname}
