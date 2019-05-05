@@ -8,7 +8,7 @@
 Summary:	GNOME Structured File library
 
 Name:		libgsf
-Version:	1.14.45
+Version:	1.14.46
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2
@@ -67,10 +67,10 @@ applications using libgsf.
 	--enable-gtk-doc \
 	--enable-introspection
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # remove unpackaged files
 rm -rf %{buildroot}%{_datadir}/doc/libgsf
