@@ -15,6 +15,11 @@ License:	LGPLv2
 URL:		https://www.gnumeric.org
 Source0:	https://download.gnome.org/sources/libgsf/1.14/%{name}-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
 BuildRequires:	bzip2-devel
