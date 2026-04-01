@@ -8,8 +8,8 @@
 Summary:	GNOME Structured File library
 
 Name:		libgsf
-Version:	1.14.54
-Release:	2
+Version:	1.14.56
+Release:	1
 Group:		System/Libraries
 License:	LGPLv2
 URL:		https://www.gnumeric.org
@@ -28,7 +28,7 @@ BuildRequires:	pkgconfig(glib-2.0) >= 2.8.0
 BuildRequires:	pkgconfig(gobject-2.0) >= 2.6.0
 BuildRequires:	pkgconfig(gobject-introspection-1.0) >= 0.6.4
 BuildRequires:	pkgconfig(gtk+-3.0) >= 3.0.0
-BuildRequires:	pkgconfig(libxml-2.0) >= 2.4.16
+BuildRequires:	pkgconfig(libxml-2.0) >= 2.15.2
 BuildRequires:	pkgconfig(popt)
 
 %description
